@@ -21,6 +21,7 @@
 		AD93E5792BC2AF1B006F4FF3 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = AD93E5782BC2AF1B006F4FF3 /* SwiftfulRouting */; };
 		AD93E57D2BC45BE3006F4FF3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93E57C2BC45BE3006F4FF3 /* HomeView.swift */; };
 		AD93E5802BC45DD8006F4FF3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93E57F2BC45DD8006F4FF3 /* CategoryCell.swift */; };
+		AD93E5A62BC513EC006F4FF3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD93E5A52BC513EC006F4FF3 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AD93E5722BC2AC58006F4FF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD93E57C2BC45BE3006F4FF3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AD93E57F2BC45DD8006F4FF3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		AD93E5A52BC513EC006F4FF3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		AD93E5572BC2A76A006F4FF3 /* ST_Spotify */ = {
 			isa = PBXGroup;
 			children = (
+				AD93E5A42BC513CD006F4FF3 /* Models */,
 				AD93E57E2BC45DCB006F4FF3 /* Components */,
 				AD93E57A2BC45BCF006F4FF3 /* Views */,
 				AD93E5582BC2A76A006F4FF3 /* ST_SpotifyApp.swift */,
@@ -124,6 +127,14 @@
 				AD93E57F2BC45DD8006F4FF3 /* CategoryCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AD93E5A42BC513CD006F4FF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD93E5A52BC513EC006F4FF3 /* Category.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD93E56B2BC2A7DE006F4FF3 /* ImageLoaderView.swift in Sources */,
+				AD93E5A62BC513EC006F4FF3 /* Category.swift in Sources */,
 				AD93E56F2BC2A995006F4FF3 /* DatabaseHelper.swift in Sources */,
 				AD93E55B2BC2A76A006F4FF3 /* ContentView.swift in Sources */,
 				AD93E5592BC2A76A006F4FF3 /* ST_SpotifyApp.swift in Sources */,
