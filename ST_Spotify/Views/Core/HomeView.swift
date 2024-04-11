@@ -14,6 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
+            
             Color.spotifyBlack.ignoresSafeArea()
             
             ScrollView {
