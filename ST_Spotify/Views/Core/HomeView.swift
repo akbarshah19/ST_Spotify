@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import SwiftfulUI
 
 struct HomeView: View {
     
     @State private var currentUser: User? = nil
     @State private var selectedCategory: Category? = nil
+    @State private var products: [Product] = []
     
     var body: some View {
         ZStack {
@@ -20,10 +22,8 @@ struct HomeView: View {
             ScrollView {
                 LazyVStack(spacing: 1, pinnedViews: [.sectionHeaders]) {
                     Section {
-                        ForEach(0..<10) { _ in
-                                Rectangle()
-                                .fill(.red)
-                        }
+                        RecentsSection()
+                        
                     } header: {
                         Header()
                     }
@@ -73,9 +73,19 @@ struct HomeView: View {
         .background(Color.spotifyBlack)
     }
     
+    @ViewBuilder private func RecentsSection() -> some View {
+        NonLazyVGrid(columns: 2, alignment: .center, spacing: 10, items: products) { product in
+            if let product {
+                RecentsCell(title: product.title,
+                            imageName: product.firstImage)
+            }
+        }
+    }
+    
     private func getData() async {
         do {
             currentUser = try await DatabaseHelper().getUser().first
+            products = try await Array(DatabaseHelper().getProduct().prefix(8))
         } catch {
             print(error)
         }

@@ -18,9 +18,16 @@ struct CategoryCell: View {
             .padding(.horizontal, 10)
             .font(.callout)
             .frame(minWidth: 65)
+            .themeColors(isSelected: isSelected)
+            .clipShape(.rect(cornerRadius: 16))
+    }
+}
+
+extension View {
+    func themeColors(isSelected: Bool) -> some View {
+        self
             .foregroundStyle(isSelected ? .spotifyBlack : .spotifyWhite)
             .background(isSelected ? .spotifyGreen : .spotifyDarkGray)
-            .clipShape(.rect(cornerRadius: 16))
     }
 }
 
