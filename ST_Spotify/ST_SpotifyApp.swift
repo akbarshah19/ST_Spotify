@@ -11,7 +11,7 @@ import SwiftUI
 struct ST_SpotifyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

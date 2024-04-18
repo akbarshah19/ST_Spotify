@@ -22,8 +22,11 @@ struct HomeView: View {
             ScrollView {
                 LazyVStack(spacing: 1, pinnedViews: [.sectionHeaders]) {
                     Section {
-                        RecentsSection()
-                        
+                        VStack(spacing: 16) {
+                            RecentsSection()
+                            
+                            NewReleaseSection()
+                        }
                     } header: {
                         Header()
                     }
@@ -79,6 +82,20 @@ struct HomeView: View {
                 RecentsCell(title: product.title,
                             imageName: product.firstImage)
             }
+        }
+    }
+    
+    @ViewBuilder private func NewReleaseSection() -> some View {
+        if let firstProduct = products.first {
+            NewReleaseCell(
+                imageName: firstProduct.firstImage,
+                headline: firstProduct.brand,
+                subheadline: firstProduct.category,
+                title: firstProduct.title,
+                subTitle: firstProduct.description,
+                add: nil,
+                play: nil
+            )
         }
     }
     
